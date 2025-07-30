@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - @yield('title')</title>
 
-    {{-- Bootstrap CSS --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    {{-- Il tuo CSS personalizzato (se presente) --}}
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 </head>
 <body>
     {{-- Navbar --}}
