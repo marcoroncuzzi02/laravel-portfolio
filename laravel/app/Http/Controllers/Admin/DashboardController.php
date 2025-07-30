@@ -7,11 +7,13 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index() {
-        return "sono nella index dell' amministrazione";
+    public function index()
+    {
+        return view('admin.index');
     }
 
-    public function profile() {
-        return "pagina profile backoffice";
+    public function profile()
+    {
+        return view('admin.profile');
     }
 }
