@@ -4,6 +4,23 @@
 
 @section("content")
 
+@if (session('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
+<div class="d-flex py-4">
+    <a class="btn btn-outline-danger" href="{{ route( 'projects.edit', $project ) }}">Modifica</a>
+
+    <form action=" {{ route( 'projects.destroy', $project ) }}" method="POST">
+        @csrf
+        @method("DELETE")
+        <input type="submit" class="btn btn-outline-danger" value="Elimina">
+    </form>
+</div>
+
 <div class="card shadow-sm">
     <div class="card-body">
         <h2 class="card-title text-primary">

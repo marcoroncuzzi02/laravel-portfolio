@@ -1,10 +1,13 @@
 @extends("layouts.projects")
 
-@section("title", "Tutti i projects")
+@section("title", "Tutti i progetti")
 
 @section("content")
 
-    <h1>Tutti i Progetti</h1>
+<div class="d-flex py-4">
+    <a class="btn btn-outline-primary" href="{{ route( 'projects.create' ) }}">Aggiungi un post</a>
+</div>
+
 
     <table class="styled-table">
         <thead>
